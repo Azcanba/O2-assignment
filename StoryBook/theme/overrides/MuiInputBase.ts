@@ -7,8 +7,5 @@ export const MuiInputBase = {
       padding: `${spacing(1.5)}px ${spacing(2)}px`,
       color: color.surface.brand,
     },
-    input: {
-      padding: 0,
-    },
   },
 };

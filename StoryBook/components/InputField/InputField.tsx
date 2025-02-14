@@ -7,7 +7,7 @@ export type InputFieldProps = {
 } & TextFieldProps;
 
 export const InputField = (props: InputFieldProps) => {
-  const { required, label, id, errorMessage, minRows, disabled, error, placeholder } = props;
+  const { required, label, id = "id", errorMessage, minRows, disabled, error, placeholder } = props;
 
   return (
     <>

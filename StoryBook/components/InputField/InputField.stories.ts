@@ -29,6 +29,14 @@ export const Primary: Story = {
   },
 };
 
+export const Focused: Story = {
+  args: {
+    label: "Input Focused",
+    placeholder: placeholder,
+    focused: true,
+  },
+};
+
 export const Disabled: Story = {
   args: {
     label: "Input Disabled",

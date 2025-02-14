@@ -2,7 +2,17 @@ import React from "react";
 
 import { Grid2, InputLabel, TextField, TextFieldProps, Box } from "@mui/material";
 
-type PickedInputFieldProps = "required" | "label" | "id" | "disabled" | "error" | "placeholder" | "onChange";
+type PickedInputFieldProps =
+  | "required"
+  | "label"
+  | "id"
+  | "disabled"
+  | "error"
+  | "placeholder"
+  | "focused"
+  | "onChange"
+  | "onBlur"
+  | "onFocus";
 
 export type InputFieldProps = {
   errorMessage?: string;

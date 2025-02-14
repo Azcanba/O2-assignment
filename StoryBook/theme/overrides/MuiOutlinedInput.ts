@@ -13,13 +13,6 @@ export const MuiOutlinedInput = {
           border: `3px solid ${color.state.default.focus}`,
         },
       },
-      "&.Mui-disabled": {
-        "&::placeholder": {
-          color: color.content.onNeutral.low,
-          opacity: 0.5,
-          ...font.bodyM,
-        },
-      },
       input: {
         padding: 0,
         "&::placeholder": {

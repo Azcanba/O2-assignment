@@ -2,12 +2,24 @@ import React from "react";
 
 import { Grid2, InputLabel, TextField, TextFieldProps, Box } from "@mui/material";
 
+type PickedInputFieldProps =
+  | "required"
+  | "label"
+  | "id"
+  | "disabled"
+  | "error"
+  | "placeholder"
+  | "focused"
+  | "onChange"
+  | "onBlur"
+  | "onFocus";
+
 export type InputFieldProps = {
   errorMessage?: string;
-} & TextFieldProps;
+} & Pick<TextFieldProps, PickedInputFieldProps>;
 
 export const InputField = (props: InputFieldProps) => {
-  const { required, label, id, errorMessage, minRows, disabled, error, placeholder } = props;
+  const { required, label, id = "id", errorMessage, disabled, error, placeholder } = props;
 
   return (
     <>
@@ -29,7 +41,6 @@ export const InputField = (props: InputFieldProps) => {
         id={`${id}-inputField`}
         fullWidth={true}
         error={!!errorMessage || error}
-        multiline={!!minRows}
         placeholder={disabled ? "" : placeholder}
         slotProps={{
           htmlInput: {

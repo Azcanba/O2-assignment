@@ -6,11 +6,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "pre": "npm install && npm run pre --workspace=frontend-app",
+    "startApp": "npm run startApp --workspace=frontend-app"
   },
   "keywords": [],
+  "workspaces": ["frontend-app"],
   "author": "",
   "license": "ISC",
+  "dependencies":{
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^6.4.4"
+  },
   "devDependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
